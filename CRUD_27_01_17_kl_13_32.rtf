@@ -1,0 +1,1832 @@
+{\rtf1\ansi\deff4\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset128 Times New Roman;}{\f4\fnil\fprq0\fcharset0 Menlo-Regular;}{\f5\fswiss\fprq2\fcharset128 Arial;}{\f6\fnil\fprq0\fcharset128 Helvetica{\*\falt Arial};}{\f7\fnil\fprq2\fcharset128 MS P????;}{\f8\fnil\fprq2\fcharset128 Arial Unicode MS;}{\f9\fswiss\fprq0\fcharset128 Arial Unicode MS;}}
+{\colortbl;\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;\red43\green131\blue159;\red163\green21\blue21;\red75\green79\blue86;\red0\green0\blue128;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033 Default;}
+{\*\cs15\snext15\cf7\ul\ulc0\langfe255\lang255\lang255 Internet Link;}
+{\s16\sbasedon0\snext17\sb240\sa120\keepn\hich\af7\dbch\af8\afs28\loch\f5\fs28 Heading;}
+{\s17\sbasedon0\snext17\sb0\sa120 Text body;}
+{\s18\sbasedon17\snext18\sb0\sa120\dbch\af9 List;}
+{\s19\sbasedon0\snext19\sb120\sa120\noline\i\dbch\af9\afs24\ai\fs24 Caption;}
+{\s20\sbasedon0\snext20\noline\dbch\af9 Index;}
+}{\info{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment OpenOffice}{\vern4120}}\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692\deftab692
+
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse195\pgwsxn11900\pghsxn16840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pgdscnxt0 Default;}}
+\formshade{\*\pgdscno0}\paperh16840\paperw11900\margl1440\margr1440\margt1440\margb1440\sectd\sbknone\sectunlocked1\pgndec\pgwsxn11900\pghsxn16840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+An\tab //}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//  CRUD.swift}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//  Keebin_Test}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//  Created by Steffen Lefort on 26/01/2017.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//  Copyright \'a9 2017 Steffen Lefort. All rights reserved.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf3\afs22\rtlch \ltrch\loch\fs22
+import}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ Foundation}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf3\afs22\rtlch \ltrch\loch\fs22
+class}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ CRUD \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{{\*\bkmkstart __DdeLink__0_2087950290}\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+func}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ login(email: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, password: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, callback: }{\cf3\afs22\rtlch \ltrch\loch\fs22
+@escaping}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ (}{\cf3\afs22\rtlch \ltrch\loch\fs22
+_}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ abe: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Dictionary}{\cf1\afs28\rtlch \ltrch\loch\fs28
+<}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, }{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+>)-> ()) \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"login is running"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+var}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ a = [}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ : }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// Now escape anything else that isn't URL-friendly}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ urlPath = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"http://keebintest-pagh.rhcloud.com/login"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ url = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSURL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(string: urlPath)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ session = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLSession}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+shared}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ request = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSMutableURLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(url: url }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"application/json"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Content-Type"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpMethod}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"POST"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ jsonObject: [}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: }{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+] = [}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"email"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: email,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"password"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: password,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+]}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ valid = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+isValidJSONObject}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(jsonObject) }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// true}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"er valid true?: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+valid}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+do}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ jsonData = }{\cf3\afs22\rtlch \ltrch\loch\fs22
+try}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+data}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(withJSONObject: jsonObject, options: .}{\cf4\afs22\rtlch \ltrch\loch\fs22
+prettyPrinted}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)             }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// do something with data}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// if the call fails, the catch block is executed}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpBody}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = jsonData}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ task = session.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+dataTask}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: request }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, completionHandler: \{data, response, error -> }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Void}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Task completed }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+data}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ httpResponse = response }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+HTTPURLResponse}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"response code is: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+httpResponse.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+statusCode}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf2\afs22\rtlch \ltrch\loch\fs22
+//Her laver vi data om til en dictionary}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ s = (}{\cf3\afs22\rtlch \ltrch\loch\fs22
+try}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+jsonObject}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: data!, options: .}{\cf4\afs22\rtlch \ltrch\loch\fs22
+mutableContainers}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)) }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSDictionary}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ (s[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"accessToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+] }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+) != }{\cf3\afs22\rtlch \ltrch\loch\fs22
+nil}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+a = s }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! [}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ : }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"vi har a og den er ikke tom }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+a}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// s is not nil, is a String type, and is now stored in a}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\} }{\cf3\afs22\rtlch \ltrch\loch\fs22
+else}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"intet virker vi er i else"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// action was either nil, or not a String type}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf2\afs22\rtlch \ltrch\loch\fs22
+//Printer keys som er i s}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"get the keys  }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+s.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+allKeys}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+callback(s }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Dictionary}{\cf1\afs28\rtlch \ltrch\loch\fs28
+<}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, }{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+>)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\})}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+task.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+resume}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// The task is just an object with all these properties set}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// In order to actually make the web request, we need to "resume"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\} }{\cf3\afs22\rtlch \ltrch\loch\fs22
+catch}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"task i userPut fejlede"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf1\afs28\rtlch \ltrch\loch\fs28{\*\bkmkend __DdeLink__0_2087950290}
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+func}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ getAllUsers(accessToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, refreshToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, callback: }{\cf3\afs22\rtlch \ltrch\loch\fs22
+@escaping}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ (}{\cf3\afs22\rtlch \ltrch\loch\fs22
+_}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ allUsersArray: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Array}{\cf1\afs28\rtlch \ltrch\loch\fs28
+<}{\cf4\afs22\rtlch \ltrch\loch\fs22
+myUser}{\cf1\afs28\rtlch \ltrch\loch\fs28
+>)-> ()) \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"vi k\'f8rer getAllRoles med denne refreshToken }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+refreshToken}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ urlPath = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"http://keebintest-pagh.rhcloud.com/api/users/allusers/"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ url = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSURL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(string: urlPath)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ session = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLSession}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+shared}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ request = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSMutableURLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(url: url }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(accessToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"accessToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(refreshToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"refreshToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpMethod}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"GET"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+var}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ userArray = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Array}{\cf1\afs28\rtlch \ltrch\loch\fs28
+<(}{\cf4\afs22\rtlch \ltrch\loch\fs22
+myUser}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)>()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ task = session.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+dataTask}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: request }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, completionHandler: \{data, response, error -> }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Void}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Task completed }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+data}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ httpResponse = response }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+HTTPURLResponse}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"response code is: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+httpResponse.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+statusCode}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//            print al info som en string. ---}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                        let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                        print("responseString = \\(responseString!)")}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+//Lav multi-dimentional array}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+var}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ json:[[}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+:}{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]] = []}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ data = data, let jsonResponse = }{\cf3\afs22\rtlch \ltrch\loch\fs22
+try}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+jsonObject}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: data, options: .}{\cf4\afs22\rtlch \ltrch\loch\fs22
+mutableContainers}{\cf1\afs28\rtlch \ltrch\loch\fs28
+) }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? [[}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+:}{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]] \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+json = jsonResponse!}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+//h\'e5ndter h\'e5ndtering af flere users end 1. *********************************************}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//            for i in json\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+var}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ mu = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+myUser}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ json.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+count}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ > }{\cf1\afs22\rtlch \ltrch\loch\fs22
+0}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+for}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ blog }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ json \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+myUser}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"vi k\'f8rer blog"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ email = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"email"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+email}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (email)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ id = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"id"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Int}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+id}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (id)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ password = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"password"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+password}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (password)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ roleId = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"roleId"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Int}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+roleId}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (roleId)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ lastName = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"lastName"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+lastName}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (lastName)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ firstName = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"firstName"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+firstName}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (firstName)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ birthday = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"birthday"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+birthday}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (birthday)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ sex = blog[}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"sex"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+]! }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+mu.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+sex}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = (sex)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                  }{\cf1\afs28\rtlch \ltrch\loch\fs28
+userArray.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+append}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(mu)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"her er userArray size }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+userArray.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+count}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+for}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ j }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ userArray\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"her er user email: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+j.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+email}{\cf1\afs28\rtlch \ltrch\loch\fs28
+!}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+          }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+//Print inholdet af vores json ovenover.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//            for i in json\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                print("User:")}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                var mu = myUser()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                for u in i\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                    mu}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                    print("her er userinfo: \\(u.key) & \\(u.value)")}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                   }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                \}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf2\afs22\rtlch \ltrch\loch\fs22
+//            \}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\})}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+task.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+resume}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+callback(userArray)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+func}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ createUser(accessToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, refreshToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, firstName: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, lastName: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, email: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+role: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Int}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, sex: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, password: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"vi k\'f8rer createUser med denne refreshToken }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+refreshToken}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ urlPath = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"http://keebintest-pagh.rhcloud.com/api/users/user/new"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ url = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSURL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(string: urlPath)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ session = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLSession}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+shared}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ request = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSMutableURLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(url: url }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"application/json"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Content-Type"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(accessToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"accessToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(refreshToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"refreshToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpMethod}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"POST"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ jsonObject: [}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: }{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+] = [}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"firstName"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: firstName,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"lastName"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: lastName,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"email"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: email,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"roleId"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: role,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"birthday"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"2010-09-08"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"sex"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: sex,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"password"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: password}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+]}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ valid = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+isValidJSONObject}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(jsonObject) }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// true}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"er valid true?: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+valid}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+do}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ jsonData = }{\cf3\afs22\rtlch \ltrch\loch\fs22
+try}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+data}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(withJSONObject: jsonObject, options: .}{\cf4\afs22\rtlch \ltrch\loch\fs22
+prettyPrinted}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)             }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// do something with data}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// if the call fails, the catch block is executed}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpBody}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = jsonData}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"her er json Data }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpBody}{\cf1\afs28\rtlch \ltrch\loch\fs28
+!}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ task = session.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+dataTask}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: request }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, completionHandler: \{data, response, error -> }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Void}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Task completed }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+data}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ httpResponse = response }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+HTTPURLResponse}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"response code is: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+httpResponse.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+statusCode}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\})}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+task.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+resume}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\} }{\cf3\afs22\rtlch \ltrch\loch\fs22
+catch}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"task i createUser fejlede"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+func}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ putUser(accessToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, refreshToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, emailCurrent: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, firstName: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, lastName: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, emailNew: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                 }{\cf1\afs28\rtlch \ltrch\loch\fs28
+role: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Int}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, sex: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, password: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"vi k\'f8rer putUser med denne accessToken }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+accessToken}{\cf5\afs22\rtlch \ltrch\loch\fs22
+) og refreshToken }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+refreshToken}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ urlPath = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"http://keebintest-pagh.rhcloud.com/api/users/user/}{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+emailCurrent}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ url = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSURL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(string: urlPath)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ session = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLSession}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+shared}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ request = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSMutableURLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(url: url }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"application/json"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Content-Type"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(accessToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"accessToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(refreshToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"refreshToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpMethod}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"PUT"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ jsonObject: [}{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: }{\cf3\afs22\rtlch \ltrch\loch\fs22
+Any}{\cf1\afs28\rtlch \ltrch\loch\fs28
+] = [}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"firstName"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: firstName,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"lastName"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: lastName,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"email"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: emailNew,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"role"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: role,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"birthday"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"2010-09-08"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"sex"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: sex,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"password"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+: password}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+]}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ valid = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+isValidJSONObject}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(jsonObject) }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// true}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"er valid true?: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+valid}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+do}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ jsonData = }{\cf3\afs22\rtlch \ltrch\loch\fs22
+try}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+JSONSerialization}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+data}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(withJSONObject: jsonObject, options: .}{\cf4\afs22\rtlch \ltrch\loch\fs22
+prettyPrinted}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)             }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// do something with data}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf2\afs22\rtlch \ltrch\loch\fs22
+// if the call fails, the catch block is executed}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpBody}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = jsonData}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"her er json Data }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpBody}{\cf1\afs28\rtlch \ltrch\loch\fs28
+!}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ task = session.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+dataTask}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: request }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, completionHandler: \{data, response, error -> }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Void}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Task completed }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+data}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ httpResponse = response }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+HTTPURLResponse}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                    }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"response code is: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+httpResponse.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+statusCode}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf2\afs22\rtlch \ltrch\loch\fs22
+//            print al info som en string. ---}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ responseString = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSString}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(data: data!, encoding: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+Encoding}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+utf8}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+rawValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"responseString = }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+responseString!}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\})}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+task.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+resume}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\} }{\cf3\afs22\rtlch \ltrch\loch\fs22
+catch}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"task i userPut fejlede"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf3\afs22\rtlch \ltrch\loch\fs22
+func}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ deleteUser(userEmail: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, accessToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, refreshToken: }{\cf4\afs22\rtlch \ltrch\loch\fs22
+String}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"vi k\'f8rer deleteUser med denne accessToken }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+accessToken}{\cf5\afs22\rtlch \ltrch\loch\fs22
+) og refreshToken }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+refreshToken}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ urlPath = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"http://keebintest-pagh.rhcloud.com/api/users/user/}{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+userEmail}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ url = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSURL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(string: urlPath)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ session = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLSession}{\cf1\afs28\rtlch \ltrch\loch\fs28
+.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+shared}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ request = }{\cf4\afs22\rtlch \ltrch\loch\fs22
+NSMutableURLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(url: url }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+! }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URL}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"application/json"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Content-Type"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(accessToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"accessToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+addValue}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(refreshToken, forHTTPHeaderField: }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"refreshToken"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+request.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+httpMethod}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ = }{\cf5\afs22\rtlch \ltrch\loch\fs22
+"DELETE"}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ task = session.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+dataTask}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(with: request }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf4\afs22\rtlch \ltrch\loch\fs22
+URLRequest}{\cf1\afs28\rtlch \ltrch\loch\fs28
+, completionHandler: \{data, response, error -> }{\cf4\afs22\rtlch \ltrch\loch\fs22
+Void}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+in}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"Task completed }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+data}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf3\afs22\rtlch \ltrch\loch\fs22
+if}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }{\cf3\afs22\rtlch \ltrch\loch\fs22
+let}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ httpResponse = response }{\cf3\afs22\rtlch \ltrch\loch\fs22
+as}{\cf1\afs28\rtlch \ltrch\loch\fs28
+? }{\cf4\afs22\rtlch \ltrch\loch\fs22
+HTTPURLResponse}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+                }{\cf4\afs22\rtlch \ltrch\loch\fs22
+print}{\cf1\afs28\rtlch \ltrch\loch\fs28
+(}{\cf5\afs22\rtlch \ltrch\loch\fs22
+"response code is: }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\\}{\cf5\afs22\rtlch \ltrch\loch\fs22
+(}{\cf1\afs28\rtlch \ltrch\loch\fs28
+httpResponse.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+statusCode}{\cf5\afs22\rtlch \ltrch\loch\fs22
+)"}{\cf1\afs28\rtlch \ltrch\loch\fs28
+)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+            }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\})}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }{\cf1\afs28\rtlch \ltrch\loch\fs28
+task.}{\cf4\afs22\rtlch \ltrch\loch\fs22
+resume}{\cf1\afs28\rtlch \ltrch\loch\fs28
+()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+        }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\fs28
+    }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+/////////////////////////////////////// main ting}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+override func viewDidLoad() \{ super.viewDidLoad() // Do any additional setup after loading the view, typically}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\fs18\loch\f6
+ }{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+from a nib. }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+Let crud = CRUD() }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+activityIndicator.startAnimating() }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+crud.login(email: "ab@gmail.com", password: "123")\{ abe in // }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+crud.putUser(accessToken: abe["accessToken"]! as! String, refreshToken: abe["refreshToken"]! as! String,}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+emailCurrent: "abc@gmail.com", firstName: "abcd", lastName: "Copenhagen", emailNew: "}{{\field{\*\fldinst HYPERLINK "mailto:abc@gmail.com" }{\fldrslt \cf7\ul\ulc0\langfe255\lang255\lang255\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+abc@gmail.com}{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+}}",}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\cf1\afs28\rtlch \ltrch\loch\fs28
+}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\hich\af4\langfe1041\dbch\af4\afs24\lang1081\loch\f4\fs24\lang1033\tx692{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\fs18\loch\f6
+ }{\scaps0\caps0\cf6\expnd0\expndtw0\i0\b0\afs28\rtlch \ltrch\loch\fs18\loch\f6
+role: 1, sex: "female", password: "123") // crud.createUser(accessToken: abe["accessToken"]! as! String, refreshToken: abe["refreshToken"]! as! String, firstName: "abc", lastName: "b", email: "abc@gmail.com", role: 1, sex: "male", password: "123") // crud.deleteUser(userEmail: "abc@gmail.com", accessToken: abe["accessToken"]! as! String, refreshToken: abe["refreshToken"]! as! String) crud.getAllUsers(accessToken: abe["accessToken"]! as! String, refreshToken: abe["refreshToken"]! as! String)\{allUsersArray in self.userList.append(contentsOf: allUsersArray) //her f\'e5r vi table til at reloade med den nye data. Dette skal ske p\'e5 DispatchQueue.main. DispatchQueue.main.async\{ self.myTable.reloadData() self.activityIndicator.stopAnimating() print("2 userList \\(self.userList)") \} \} \} \}}{\cf1\afs28\rtlch \ltrch\loch\fs28
+ }
+\par }
